@@ -1,0 +1,245 @@
+body {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: #333;
+}
+
+a {
+  text-decoration: none; 
+}
+
+.header-logo img{
+    height: 20px;
+    width: 185px;
+    margin-left: 36px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 70px;
+    z-index: 10;
+}
+
+.header-menu {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: flex-start;
+    text-align: center;
+    
+}
+
+.header-menu a {
+    margin-right: 45px;
+    color: #333;
+}
+
+.btn {
+    border-radius: 38px;
+    background-color: #F79214;
+    margin-right: 0;
+    padding: 0 20px;
+    color: #fff !important;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    height: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.first-view {
+    position: relative;
+    width: 100%;
+    height: 739px;
+}
+
+.fv-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fv-right {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    z-index: -1;
+}
+
+.fv-fill {
+    position: absolute;
+    top: 84px;
+    left: -70px;
+    z-index: -1;
+}
+
+.fv-main {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 775px;
+    z-index: -1;
+}
+
+.fv-badge {
+    position: absolute;
+    top: 105px;
+    right: 600px;
+    width: 204;
+    height: 204;
+}
+
+
+
+.fv-btn {
+    position: absolute;
+    top: 420px;
+    left: 15%;
+    border-radius: 38px;
+    height: 64px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #F79214;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+h1 {
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    transform: translate(-50%);
+    font-size: 40px;
+    color: black;
+    z-index: 2;
+}
+
+p {
+   position: absolute;
+   top: 500px;
+   left: 15%;
+   font-size: 12px;
+   line-height: 16px;
+   color: #333;
+   z-index: 2; 
+}
+
+.header-logo img:hover {
+    opacity: 0.8;
+}
+
+.header-menu a:hover {
+    opacity: 0.8;
+}
+
+.fv-btn:hover {
+    opacity: 0.8;
+}
+
+/* タブレット向け */
+@media screen and (max-width: 1024px) {
+    .header-menu {
+        display: none;
+    }
+
+    /* ハンバーガー表示 */
+    .hamburger {
+        display: flex;
+    }
+
+    /* モバイルメニュー */
+        .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 9;
+    }
+
+    .mobile-menu a {
+        color: #333;
+        padding: 10px 20px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .fv-btn {
+        width: 80%;
+        left: 50%;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    p {
+        font-size: 12px;
+        left: 10%;
+        width: 80%
+    }
+} 
+
+    /* スマホ向け */
+    @media screen and (max-width: 480px) {
+        .mobile-menu a {
+            font-size: 14px;
+            padding: 12px 20px;
+        }
+        
+        .fv-btn {
+            width: 90%;
+            left: 5%;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            font-size: 11px;
+            left: 5%;
+            width: 90%;
+        }
+    }
